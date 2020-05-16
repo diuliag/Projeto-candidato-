@@ -1,4 +1,4 @@
-#include <iostream>
+#include <bits/stdc++.h>
 
 using namespace std;
 
@@ -16,7 +16,7 @@ int main()
    cin >> escolaridade;
 
    int experiencia, total, totalex;
-   string disponibilidadeViagem, habilitacao;
+   char disponibilidadeViagem, habilitacao;
 
    cout << "Voce tem quantos anos de experiencia profissional? ";
    cin >> experiencia;
@@ -69,7 +69,31 @@ int main()
     }
 
    cout << "Pontos por escolaridade: " << total << endl;
-   cout << "Pontos por experiencia: " << totalex;
+   cout << "Pontos por experiencia: " << totalex << endl;
+
+
+   if ( total >= 20 && habilitacao == 'S') {
+
+   cout << "Voce esta habilitado para o(s) seguinte(s) cargo(s): " << endl;
+   cout << "ASSISTENTE" << endl;
+   }
+
+   else if ( total >= 30 && experiencia >= 2) {
+
+   cout << "Voce esta habilitado para o(s) seguinte(s) cargo(s): " << endl;
+   cout << "GERENTE" << endl;
+   }
+
+   else if ( total >= 30 && experiencia >= 5 && disponibilidadeViagem == 'S') {
+
+   cout << "Voce esta habilitado para o(s) seguinte(s) cargo(s): " << endl;
+   cout << "ANALISTA" << endl;
+   }
+
+   else {
+
+    cout << "Infelizmente seu perfil nao atende a empresa" << endl;
+   }
 
     return 0;
 }
